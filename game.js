@@ -11,7 +11,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 // Assuming os.json is in the same directory as this JavaScript file
-const jsonFilePath = "/os.json";
+const jsonFilePath = "./os.json";
 
 // Fetch the JSON file
 fetch(jsonFilePath)
