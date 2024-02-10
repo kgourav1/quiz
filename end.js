@@ -1,13 +1,22 @@
 const username = document.querySelector("#username");
 const saveScoreBtn = document.querySelector("#saveScoreBtn");
-const finalScore = document.querySelector("#finalScore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 const MAX_HIGH_SCORES = 5;
 
-finalScore.innerText = mostRecentScore || 0;
+const quizSummary = JSON.parse(localStorage.getItem("quizSummary")) || {};
+
+// Extract data from quizSummary
+const attempt = quizSummary.attempt || 0;
+const correct = quizSummary.correct || 0;
+const totalScore = quizSummary.totalScore || 0;
+
+// Fill the table cells with data
+document.getElementById("attempt").innerText = attempt;
+document.getElementById("correct").innerText = correct;
+document.getElementById("totalScore").innerText = totalScore;
 
 username.addEventListener("keyup", () => {
   saveScoreBtn.disabled = !username.value;

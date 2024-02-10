@@ -11,7 +11,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 // Assuming os.json is in the same directory as this JavaScript file
-const jsonFilePath = "os.json";
+const jsonFilePath = "/os.json";
 
 // Fetch the JSON file
 fetch(jsonFilePath)
@@ -32,12 +32,15 @@ fetch(jsonFilePath)
     console.error("There was a problem fetching the JSON file:", error);
   });
 
-const SCORE_POINTS = 100;
+const SCORE_POINTS = 3;
+const NEGATIVE_POINTS = 1;
 const MAX_QUESTIONS = 10;
 
 startGame = () => {
   questionCounter = 0;
+  attempCounter = 0;
   score = 0;
+  correctCounter = 0;
   availableQuestions = [...questions];
   getNewQuestion();
 };
@@ -45,6 +48,14 @@ startGame = () => {
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
+    localStorage.setItem(
+      "quizSummary",
+      JSON.stringify({
+        attempt: attempCounter,
+        correct: correctCounter,
+        totalScore: score,
+      })
+    );
     return window.location.assign("./end.html");
   }
 
@@ -54,7 +65,7 @@ getNewQuestion = () => {
 
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionsIndex];
-  question.innerText = currentQuestion.question;
+  question.innerHTML = currentQuestion.question;
 
   choices.forEach((choice) => {
     const number = choice.dataset["number"];
@@ -67,7 +78,7 @@ getNewQuestion = () => {
 choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
     if (!acceptingAnswers) return;
-
+    attempCounter++;
     acceptingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
@@ -77,6 +88,9 @@ choices.forEach((choice) => {
 
     if (classToApply == "correct") {
       incrementScore(SCORE_POINTS);
+      correctCounter++;
+    } else {
+      decrementScore(NEGATIVE_POINTS);
     }
 
     selectedChoice.parentElement.classList.add(classToApply);
@@ -92,3 +106,17 @@ incrementScore = (num) => {
   score += num;
   scoreText.innerText = score;
 };
+
+decrementScore = (num) => {
+  score -= num;
+  scoreText.innerText = score;
+};
+
+const skipButton = document.querySelector(".skip-btn");
+
+skipButton.addEventListener("click", () => {
+  if (acceptingAnswers) {
+    acceptingAnswers = false;
+    getNewQuestion();
+  }
+});

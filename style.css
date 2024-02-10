@@ -9,8 +9,11 @@
   font-family: "Times New Roman", Times, serif;
 }
 
-h1 {
-  font-size: 5.4rem;
+h1,
+table,
+th,
+td {
+  font-size: 2.4rem;
   color: #fff;
   margin-bottom: 5rem;
 }
@@ -129,4 +132,61 @@ input::placeholder {
   margin-left: 1rem;
   font-size: 2rem;
   color: rgb(28, 26, 26);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+thead th {
+  border: 1px solid #102dec;
+  padding: 8px;
+  text-align: left;
+}
+
+tbody td {
+  border: 1px solid #102dec;
+  padding: 8px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td {
+  text-align: center;
+}
+
+td.total-score {
+  font-weight: bold;
+}
+
+.skip-btn {
+  width: 200px;
+  background-color: #45a148;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.skip-btn:hover {
+  background-color: #3b8f3f;
+}
+
+.skip-btn:active {
+  background-color: #337135;
+}
+
+.title {
+  font-size: 5.4rem;
 }
