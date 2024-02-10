@@ -10,8 +10,20 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+// Get the 'sub' value from the URL parameter
+var subValue = getUrlParameter("sub");
+// Function to parse URL parameters
+function getUrlParameter(name) {
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(window.location.href);
+  if (!results) return null;
+  if (!results[2]) return "";
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 // Assuming os.json is in the same directory as this JavaScript file
-const jsonFilePath = "./os.json";
+const jsonFilePath = "./os/" + subValue + ".json";
 
 // Fetch the JSON file
 fetch(jsonFilePath)
@@ -56,7 +68,7 @@ getNewQuestion = () => {
         totalScore: score,
       })
     );
-    return window.location.assign("./end.html");
+    return window.location.assign(`./end.html?sub=${subValue}`);
   }
 
   questionCounter++;

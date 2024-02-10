@@ -37,7 +37,7 @@
   },
 
   {
-    "question": "A process executes the code\n\nfork ();\nfork ();\nfork ();\nThe total number of child processes created is",
+    "question": "A process executes the code<br><br>fork ();<br>fork ();<br>fork ();<br>The total number of child processes created is",
     "choice1": "3",
     "choice2": "4",
     "choice3": "7",
@@ -46,7 +46,7 @@
     "explanation": "Correct answer is (C). Each call to fork() doubles the number of processes. So, with 3 fork() calls, the total number of child processes created is 2^3 - 1 = 7."
   },
   {
-    "question": "Consider the 3 processes, P1, P2, and P3 shown in the table\n\nProcess Arrival time Time unit required\nP1 0 5\nP2 1 7\nP3 3 4\nThe completion order of the 3 processes under the policies FCFS and RRS (round robin scheduling with CPU quantum of 2 time units) are",
+    "question": "Consider the 3 processes, P1, P2, and P3 shown in the table<br><br>Process Arrival time Time unit required<br><br>P1 0 5<br><br>P2 1 7<br><br>P3 3 4<br><br>The completion order of the 3 processes under the policies FCFS and RRS (round robin scheduling with CPU quantum of 2 time units) are",
     "choice1": "FCFS: P1, P2, P3 RR2: P1, P2, P3",
     "choice2": "FCFS: P1, P3, P2 RR2: P1, P3, P2",
     "choice3": "FCFS: P1, P2, P3 RR2: P1, P3, P2",
@@ -100,12 +100,30 @@
     "explanation": "Correct answer is (B). The total time to load all libraries includes the average seek time and rotational latency for each library."
   },
   {
-    "question": "Consider the following table of arrival time and burst time for three processes P0, P1, and P2. The pre-emptive shortest job first scheduling algorithm is used. Scheduling is carried out only at the arrival or completion of processes. What is the average waiting time for the three processes?\n\n| Process | Arrival time | Burst Time |\n|---------|--------------|------------|\n| P0      | 0 ms         | 9 ms       |\n| P1      | 1 ms         | 4 ms       |\n| P2      | 2 ms         | 9 ms       |",
+    "question": "Consider the following table of arrival time and burst time for three processes P0, P1, and P2. The pre-emptive shortest job first scheduling algorithm is used. Scheduling is carried out only at the arrival or completion of processes. What is the average waiting time for the three processes?<br><br><table><thead><tr><th>Process</th><th>Arrival time</th><th>Burst Time</th></tr></thead><tbody><tr><td>P0</td><td>0 ms</td><td>9 ms</td></tr><tr><td>P1</td><td>1 ms</td><td>4 ms</td></tr><tr><td>P2</td><td>2 ms</td><td>9 ms</td></tr></tbody></table>",
     "choice1": "5.0 ms",
     "choice2": "4.33 ms",
     "choice3": "6.33 ms",
     "choice4": "7.33 ms",
     "answer": 1,
     "explanation": "Correct answer is (A). With the pre-emptive shortest job first scheduling algorithm, processes are scheduled based on their burst times. The average waiting time is calculated based on the waiting time of each process."
+  },
+  {
+    "question": "Let the time taken to switch between user and kernel modes of execution be t1 while the time taken to switch between two processes be t2. Which of the following is TRUE?",
+    "choice1": "t1 > t2",
+    "choice2": "t1 = t2",
+    "choice3": "t1 < t2",
+    "choice4": "Nothing can be said about the relation between t1 and t2",
+    "answer": 3,
+    "explanation": "Correct answer is (C). Process switching involves mode switch, which typically takes more time compared to switching between user and kernel modes."
+  },
+  {
+    "question": "A system uses FIFO policy for page replacement. It has 4 page frames with no pages loaded to begin with. The system first accesses 100 distinct pages in some order and then accesses the same 100 pages but now in the reverse order. How many page faults will occur?",
+    "choice1": "196",
+    "choice2": "192",
+    "choice3": "197",
+    "choice4": "195",
+    "answer": 1,
+    "explanation": "Correct answer is (A). The first 4 accesses will not cause page faults, but all subsequent accesses will cause page faults, resulting in a total of 100 + 96 = 196 page faults."
   }
 ]

@@ -1,3 +1,16 @@
+var subValue = getUrlParameter("sub");
+var playButton = document.querySelector(".btn[href='./game.html']");
+playButton.href = `./game.html?sub=${subValue}`;
+// Function to parse URL parameters
+function getUrlParameter(name) {
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(window.location.href);
+  if (!results) return null;
+  if (!results[2]) return "";
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 const username = document.querySelector("#username");
 const saveScoreBtn = document.querySelector("#saveScoreBtn");
 const mostRecentScore = localStorage.getItem("mostRecentScore");

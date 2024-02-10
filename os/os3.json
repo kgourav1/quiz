@@ -1,38 +1,101 @@
 [
   {
-    "question": "Let the time taken to switch between user and kernel modes of execution be t1 while the time taken to switch between two processes be t2. Which of the following is TRUE?",
-    "choice1": "t1 > t2",
-    "choice2": "t1 = t2",
-    "choice3": "t1 < t2",
-    "choice4": "Nothing can be said about the relation between t1 and t2",
+    "question": "In a preemptive scheduling algorithm, which of the following conditions may lead to starvation?",
+    "choice1": "High priority processes frequently yield the CPU to lower priority processes.",
+    "choice2": "Low priority processes are frequently preempted by higher priority processes.",
+    "choice3": "Processes with long burst times are repeatedly selected for execution.",
+    "choice4": "Processes with short burst times are repeatedly selected for execution.",
+    "answer": 1,
+    "explanation": "Correct answer is (A). In preemptive scheduling, if high priority processes frequently yield the CPU to lower priority processes, those high priority processes may starve and never get the chance to execute."
+  },
+  {
+    "question": "Consider a system using the LRU (Least Recently Used) page replacement policy with 5 page frames. If a process accesses the same 10 pages in the order: 1, 2, 3, 4, 5, 6, 1, 2, 7, 8, how many page faults will occur?",
+    "choice1": "8",
+    "choice2": "9",
+    "choice3": "10",
+    "choice4": "11",
     "answer": 3,
-    "explanation": "Correct answer is (C). Process switching involves mode switch, which typically takes more time compared to switching between user and kernel modes."
+    "explanation": "Correct answer is (C). Since the system has 5 page frames and the process accesses 10 pages, all pages after the first 5 accesses will cause page faults."
   },
   {
-    "question": "A system uses FIFO policy for page replacement. It has 4 page frames with no pages loaded to begin with. The system first accesses 100 distinct pages in some order and then accesses the same 100 pages but now in the reverse order. How many page faults will occur?",
-    "choice1": "196",
-    "choice2": "192",
-    "choice3": "197",
-    "choice4": "195",
+    "question": "Which of the following scheduling algorithms is most suitable for time-sharing systems?",
+    "choice1": "Shortest Job First (SJF)",
+    "choice2": "First-Come, First-Served (FCFS)",
+    "choice3": "Round Robin (RR)",
+    "choice4": "Priority Scheduling",
+    "answer": 3,
+    "explanation": "Correct answer is (C). Round Robin scheduling is commonly used in time-sharing systems because it ensures fair allocation of CPU time among multiple processes."
+  },
+  {
+    "question": "Consider a situation where two processes, P1 and P2, are attempting to enter their critical sections using the following methods. Method Used by P1: <br> while (flag == 1) ; <br> Critical Section <br> flag = 0; <br> Method Used by P2: <br> while (flag == 0) ; <br> Critical Section <br> flag = 1; <br> Which of the following statements best describes the properties achieved by these methods?",
+    "choice1": "Mutual exclusion but not deadlock prevention",
+    "choice2": "Deadlock prevention but not mutual exclusion",
+    "choice3": "Neither mutual exclusion nor deadlock prevention",
+    "choice4": "Both mutual exclusion and deadlock prevention",
     "answer": 1,
-    "explanation": "Correct answer is (A). The first 4 accesses will not cause page faults, but all subsequent accesses will cause page faults, resulting in a total of 100 + 96 = 196 page faults."
+    "explanation": "Correct answer is (A). These methods ensure mutual exclusion because only one process can enter the critical section at a time. However, they do not prevent deadlock, as both processes might enter a waiting state indefinitely if executed in a certain order."
   },
   {
-    "question": "Which of the following statements are true?",
-    "choice1": "I only",
-    "choice2": "I and III only",
-    "choice3": "II and III only",
-    "choice4": "I, II and III",
+    "question": "Which of the following is NOT a valid reason for using virtual memory?",
+    "choice1": "To provide protection and isolation between processes.",
+    "choice2": "To allow processes to access more memory than physically available.",
+    "choice3": "To increase CPU utilization by allowing processes to share memory space.",
+    "choice4": "To provide a mechanism for inter-process communication.",
     "answer": 4,
-    "explanation": "Correct answer is (D). Each statement is individually true: I. Shortest remaining time first scheduling may cause starvation. II. Preemptive scheduling may cause starvation. III. Round robin is better than FCFS in terms of response time."
+    "explanation": "Correct answer is (D). Virtual memory is primarily used to provide a larger logical memory space than physically available, to ensure protection and isolation between processes, and to improve CPU utilization. Inter-process communication is typically facilitated through other mechanisms such as message passing or shared memory."
   },
   {
-    "question": "Consider the methods used by processes P1 and P2 for accessing their critical sections whenever needed. Which one of the following statements describes the properties achieved?",
-    "choice1": "Mutual exclusion but not progress",
-    "choice2": "Progress but not mutual exclusion",
-    "choice3": "Neither mutual exclusion nor progress",
-    "choice4": "Both mutual exclusion and progress",
+    "question": "Which of the following disk scheduling algorithms provides the best average response time for a mix of read and write requests?",
+    "choice1": "First-Come, First-Served (FCFS)",
+    "choice2": "Shortest Seek Time First (SSTF)",
+    "choice3": "Circular SCAN (C-SCAN)",
+    "choice4": "LOOK",
+    "answer": 2,
+    "explanation": "Correct answer is (B). Shortest Seek Time First (SSTF) minimizes the seek time by servicing the request that is closest to the current head position, which typically results in the best average response time."
+  },
+  {
+    "question": "Which of the following statements regarding deadlock is FALSE?",
+    "choice1": "Deadlock can occur when each process holds one resource and requests another resource held by another process.",
+    "choice2": "Deadlock can be prevented by using a resource allocation graph and ensuring that there are no cycles in the graph.",
+    "choice3": "Deadlock can be resolved by preemption, where resources are forcibly taken from processes.",
+    "choice4": "Deadlock can occur in systems with a single resource type.",
+    "answer": 2,
+    "explanation": "Correct answer is (B). Deadlock prevention involves using techniques such as resource allocation graphs to detect and avoid potential deadlocks by ensuring that there are no cycles in the resource allocation graph."
+  },
+  {
+    "question": "Consider a scenario where a system employs demand paging for memory management. Which of the following actions will result in a page fault?",
+    "choice1": "Accessing a page that is currently present in main memory.",
+    "choice2": "Accessing a page that is marked as dirty.",
+    "choice3": "Accessing a page that is not currently present in main memory.",
+    "choice4": "Accessing a page that is shared among multiple processes.",
+    "answer": 3,
+    "explanation": "Correct answer is (C). A page fault occurs when a process attempts to access a page that is not currently present in main memory and needs to be brought in from secondary storage."
+  },
+  {
+    "question": "Which of the following statements regarding multilevel paging is TRUE?",
+    "choice1": "It reduces the size of the page table.",
+    "choice2": "It increases the size of the page table.",
+    "choice3": "It has no impact on the size of the page table.",
+    "choice4": "It reduces the size of the virtual address space.",
     "answer": 1,
-    "explanation": "Correct answer is (A). The methods ensure mutual exclusion as only one process can enter the critical section at a time. However, progress is not guaranteed because a process waiting to enter its critical section might be indefinitely delayed."
+    "explanation": "Correct answer is (A). Multilevel paging reduces the size of the page table by dividing it into smaller, more manageable pieces, which are accessed hierarchically."
+  },
+  {
+    "question": "Which of the following statements regarding CPU scheduling is FALSE?",
+    "choice1": "Round Robin scheduling provides fair allocation of CPU time among processes.",
+    "choice2": "Shortest Job First scheduling may lead to starvation for longer processes.",
+    "choice3": "Priority scheduling always selects the process with the highest priority for execution.",
+    "choice4": "First-Come, First-Served scheduling is non-preemptive.",
+    "answer": 3,
+    "explanation": "Correct answer is (C). Priority scheduling selects the process with the highest priority for execution, but if multiple processes have the same priority, other factors such as arrival time may also be considered."
+  },
+  {
+    "question": "Consider a scenario where multiple processes are accessing a shared resource using the Bakery Algorithm for mutual exclusion. Which of the following statements regarding the Bakery Algorithm is TRUE?",
+    "choice1": "It guarantees deadlock-free execution.",
+    "choice2": "It ensures bounded waiting.",
+    "choice3": "It requires knowledge of the total number of processes in advance.",
+    "choice4": "It imposes strict FIFO ordering for process execution.",
+    "answer": 2,
+    "explanation": "Correct answer is (B). The Bakery Algorithm ensures mutual exclusion and bounded waiting, but it does not strictly enforce FIFO ordering for process execution."
   }
 ]

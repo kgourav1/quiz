@@ -17,7 +17,7 @@
               <div id="progressBarFull"></div>
             </div>
           </div>
-          <div class="hud-item">
+          <div class="hud-item" style="opacity: 0">
             <p class="hud-prefix">Score</p>
             <h1 class="hud-main-text" id="score">0</h1>
           </div>
@@ -43,6 +43,25 @@
       </div>
     </div>
 
-    <script src="./js/game.js"></script>
+    <!-- <script src="./js/game.js"></script> -->
+    <script>
+      // Function to parse URL parameters
+      function getUrlParameter(name) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(window.location.href);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      // Get the value of the 'sub' parameter from the URL
+      var subValue = getUrlParameter("sub");
+
+      // Include game.js file with the 'sub' value as a query parameter
+      var script = document.createElement("script");
+      script.src = "./js/game.js?sub=" + encodeURIComponent(subValue);
+      document.head.appendChild(script);
+    </script>
   </body>
 </html>

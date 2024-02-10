@@ -63,6 +63,22 @@ h2 {
     rgb(0, 102, 255) 100%
   );
 }
+.btn-color-1 {
+  background: #3498db;
+  color: #fff;
+}
+.btn-color-2 {
+  background: #2ecc71;
+  color: #fff;
+}
+.btn-color-3 {
+  background: #e74c3c;
+  color: #fff;
+}
+.btn-color-4 {
+  background: #9b59b6;
+  color: #fff;
+}
 
 .btn:hover {
   cursor: pointer;
@@ -143,16 +159,12 @@ table {
 thead th {
   border: 1px solid #102dec;
   padding: 8px;
-  text-align: left;
+  text-align: center;
 }
 
 tbody td {
   border: 1px solid #102dec;
   padding: 8px;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
 }
 
 td {
@@ -189,4 +201,35 @@ td.total-score {
 
 .title {
   font-size: 5.4rem;
+  text-align: center;
+}
+
+/* subject list css */
+
+.subjects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subject {
+  width: calc(100% / 2); /* Initially each div takes 50% width */
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  /* For screens larger than 600px, each div takes 33.33% width */
+  .subject {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  /* For screens larger than 900px, each div takes 25% width */
+  .subject {
+    width: calc(100% / 4);
+  }
 }

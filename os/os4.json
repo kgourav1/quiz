@@ -1,0 +1,92 @@
+[
+  {
+    "question": "In the context of operating systems, what is the purpose of a semaphore?",
+    "choice1": "To control access to shared resources among multiple processes.",
+    "choice2": "To allocate CPU time to different processes in a fair manner.",
+    "choice3": "To manage memory allocation for processes.",
+    "choice4": "To perform context switching between processes.",
+    "answer": 1,
+    "explanation": "Correct answer is (A). Semaphores are used for process synchronization and to control access to shared resources by ensuring that only one process can access the resource at a time."
+  },
+  {
+    "question": "Which of the following memory allocation strategies suffers from external fragmentation?",
+    "choice1": "First Fit",
+    "choice2": "Best Fit",
+    "choice3": "Worst Fit",
+    "choice4": "Next Fit",
+    "answer": 3,
+    "explanation": "Correct answer is (C). Worst Fit memory allocation strategy suffers from external fragmentation as it allocates the largest available block of memory, leaving smaller holes that may not be efficiently utilized."
+  },
+  {
+    "question": "What is the main purpose of the TLB (Translation Lookaside Buffer) in a computer system?",
+    "choice1": "To store recently accessed instructions for faster execution.",
+    "choice2": "To store recently accessed memory locations for faster address translation.",
+    "choice3": "To store the page table entries of all processes in memory.",
+    "choice4": "To store the cache mapping information for data accesses.",
+    "answer": 2,
+    "explanation": "Correct answer is (B). The TLB is a cache that stores recently accessed memory locations and their corresponding physical addresses, allowing for faster address translation in virtual memory systems."
+  },
+  {
+    "question": "Which of the following disk scheduling algorithms may result in the 'SSTF (Shortest Seek Time First)' paradox?",
+    "choice1": "First-Come, First-Served (FCFS)",
+    "choice2": "Circular SCAN (C-SCAN)",
+    "choice3": "LOOK",
+    "choice4": "SCAN",
+    "answer": 4,
+    "explanation": "Correct answer is (D). The SCAN disk scheduling algorithm may result in the SSTF paradox, where a request close to the current head position is skipped in favor of serving requests further away, potentially leading to increased seek times."
+  },
+  {
+    "question": "Which of the following statements accurately describes the benefits of demand paging?",
+    "choice1": "It reduces memory overhead by swapping entire processes in and out of main memory.",
+    "choice2": "It reduces the time required to load programs into main memory.",
+    "choice3": "It allows programs to execute entirely from disk without loading into main memory.",
+    "choice4": "It allows for more efficient memory utilization by bringing in only the required pages into main memory.",
+    "answer": 4,
+    "explanation": "Correct answer is (D). Demand paging brings in only the required pages of a process into main memory, reducing the memory overhead and allowing for more efficient memory utilization."
+  },
+  {
+    "question": "Which of the following is a disadvantage of using contiguous memory allocation?",
+    "choice1": "It suffers from fragmentation.",
+    "choice2": "It requires complex address translation mechanisms.",
+    "choice3": "It allows for efficient use of cache memory.",
+    "choice4": "It simplifies memory management.",
+    "answer": 1,
+    "explanation": "Correct answer is (A). Contiguous memory allocation suffers from fragmentation, where free memory becomes fragmented into small non-contiguous blocks, reducing the efficiency of memory utilization."
+  },
+  {
+    "question": "In a multiprogramming system, what is the purpose of the dispatcher?",
+    "choice1": "To allocate CPU time to different processes.",
+    "choice2": "To handle process synchronization and communication.",
+    "choice3": "To load and execute processes on the CPU.",
+    "choice4": "To manage memory allocation for processes.",
+    "answer": 3,
+    "explanation": "Correct answer is (C). The dispatcher is responsible for loading and executing processes on the CPU, including context switching between processes."
+  },
+  {
+    "question": "Which of the following is a characteristic of a monolithic kernel?",
+    "choice1": "It has a modular structure with well-defined interfaces between components.",
+    "choice2": "It allows for dynamic loading and unloading of kernel modules.",
+    "choice3": "It provides better performance and scalability compared to other kernel architectures.",
+    "choice4": "It implements all operating system functions in a single address space.",
+    "answer": 4,
+    "explanation": "Correct answer is (D). A monolithic kernel implements all operating system functions, including device drivers and file system management, within a single address space."
+  },
+  {
+    "question": "Which of the following scheduling algorithms may suffer from the 'convoy effect'?",
+    "choice1": "Round Robin",
+    "choice2": "Shortest Job First",
+    "choice3": "First-Come, First-Served",
+    "choice4": "Priority Scheduling",
+    "answer": 3,
+    "explanation": "Correct answer is (C). First-Come, First-Served scheduling may suffer from the convoy effect, where short jobs get stuck behind long jobs, causing increased waiting times for short processes."
+  },
+  {
+    "question": "What is the purpose of a page table in a virtual memory system?",
+    "choice1": "To map physical addresses to virtual addresses.",
+    "choice2": "To store the contents of disk blocks in main memory.",
+    "choice3": "To manage allocation of physical memory to processes.",
+    "choice4": "To store the translation of virtual addresses to physical addresses.",
+    "answer": 4,
+    "explanation": "Correct answer is (D). A page table stores the translation of virtual addresses used by processes to physical addresses in main memory, allowing for virtual memory addressing."
+  }
+]
