@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Which of the following is NOT a valid deadlock prevention scheme? (GATE CS 2000)",
+    "choice1": "Release all resources before requesting a new resource",
+    "choice2": "Number the resources uniquely and never request a lower numbered resource than the last one requested.",
+    "choice3": "Never request a resource after releasing any resource",
+    "choice4": "Request that all required resources be allocated before execution",
+    "answer": 3,
+    "explanation": "The correct answer is (C). This scheme doesn't prevent deadlock but rather avoids it. It's a basic rule in deadlock prevention to not request a new resource after releasing any resource to avoid cyclic dependencies."
+  },
+  {
+    "question": "Let m[0]…m[4] be mutexes (binary semaphores) and P[0] …. P[4] be processes. Suppose each process P[i] executes the following: wait (m[i]); wait(m[(i+1) mode 4]); ------ release (m[i]); release (m[(i+1)mod 4]); This could cause (GATE CS 2000)",
+    "choice1": "Thrashing",
+    "choice2": "Deadlock",
+    "choice3": "Starvation, but not deadlock",
+    "choice4": "None of the above",
+    "answer": 2,
+    "explanation": "Correct answer is (B). This sequence of actions can result in deadlock, where each process is waiting for a resource held by the next process in the sequence, forming a circular wait condition."
+  },
+  {
+    "question": "A graphics card has an onboard memory of 1 MB. Which of the following modes can the card not support? (GATE CS 2000)",
+    "choice1": "1600 x 400 resolution with 256 colors on a 17-inch monitor",
+    "choice2": "1600 x 400 resolution with 16 million colors on a 14-inch monitor",
+    "choice3": "800 x 400 resolution with 16 million colors on a 17-inch monitor",
+    "choice4": "800 x 800 resolution with 256 colors on a 14-inch monitor",
+    "answer": 2,
+    "explanation": "Correct answer is (B). This resolution with 16 million colors exceeds the onboard memory capacity. The other options can be supported within 1 MB."
+  },
+  {
+    "question": "Consider a virtual memory system with a FIFO page replacement policy. For an arbitrary page access pattern, increasing the number of page frames in the main memory will (GATE CS 2001)",
+    "choice1": "Always decrease the number of page faults",
+    "choice2": "Always increase the number of page faults",
+    "choice3": "Sometimes increase the number of page faults",
+    "choice4": "Never affect the number of page faults",
+    "answer": 3,
+    "explanation": "Correct answer is (C). Increasing the number of page frames may sometimes lead to an increase in page faults due to Belady's Anomaly."
+  },
+  {
+    "question": "Which of the following requires a device driver? (GATE CS 2001)",
+    "choice1": "Register",
+    "choice2": "Cache",
+    "choice3": "Main memory",
+    "choice4": "Disk",
+    "answer": 4,
+    "explanation": "Correct answer is (D). Disk requires a device driver to interface with the operating system."
+  },
+  {
+    "question": "Suppose the time to service a page fault is on average 10 milliseconds, while a memory access takes 1 microsecond. Then a 99.99% hit ratio results in an average memory access time of (GATE CS 2000)",
+    "choice1": "1.9999 milliseconds",
+    "choice2": "1 millisecond",
+    "choice3": "9.999 microseconds",
+    "choice4": "1.9999 microseconds",
+    "answer": 4,
+    "explanation": "Correct answer is (D). The average memory access time can be calculated based on the hit ratio and page fault service time."
+  },
+  {
+    "question": "Which of the following need not necessarily be saved on a context switch between processes? (GATE CS 2000)",
+    "choice1": "General purpose registers",
+    "choice2": "Translation look-aside buffer",
+    "choice3": "Program counter",
+    "choice4": "All of the above",
+    "answer": 2,
+    "explanation": "Correct answer is (B). The TLB is typically flushed on a context switch."
+  },
+  {
+    "question": "Where does the swap space reside? (GATE 2001)",
+    "choice1": "RAM",
+    "choice2": "Disk",
+    "choice3": "ROM",
+    "choice4": "On-chip cache",
+    "answer": 2,
+    "explanation": "Correct answer is (B). Swap space is typically on disk."
+  },
+  {
+    "question": "Which of the following does not interrupt a running process? (GATE CS 2001)",
+    "choice1": "A device",
+    "choice2": "Timer",
+    "choice3": "Scheduler process",
+    "choice4": "Power failure",
+    "answer": 3,
+    "explanation": "Correct answer is (C). The scheduler process doesn’t interrupt running processes but selects which process should run next."
+  },
+  {
+    "question": "Which of the following scheduling algorithms is non-preemptive? (GATE CS 2002)",
+    "choice1": "Round Robin",
+    "choice2": "First-In First-Out",
+    "choice3": "Multilevel Queue Scheduling",
+    "choice4": "Multilevel Queue Scheduling with Feedback",
+    "answer": 2,
+    "explanation": "Correct answer is (B). FIFO scheduling is non-preemptive."
+  }
+]

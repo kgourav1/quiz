@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What is the main purpose of an operating system?",
+    "choice1": "To provide a user interface",
+    "choice2": "To manage hardware resources",
+    "choice3": "To run application software",
+    "choice4": "To create files and directories",
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is not a function of an operating system?",
+    "choice1": "Memory management",
+    "choice2": "File system management",
+    "choice3": "Networking management",
+    "choice4": "Compiler execution",
+    "answer": 4
+  },
+  {
+    "question": "Which mechanism is used by the operating system to prevent multiple processes from interfering with each other's memory?",
+    "choice1": "Virtual memory",
+    "choice2": "Memory protection",
+    "choice3": "Memory segmentation",
+    "choice4": "Memory swapping",
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is not a scheduling algorithm used by operating systems?",
+    "choice1": "Round Robin",
+    "choice2": "First-Come, First-Served",
+    "choice3": "Last-In, First-Out",
+    "choice4": "Priority Scheduling",
+    "answer": 3
+  },
+  {
+    "question": "What is the primary goal of CPU scheduling in an operating system?",
+    "choice1": "To ensure fair allocation of CPU time",
+    "choice2": "To minimize the response time of processes",
+    "choice3": "To maximize the throughput of the system",
+    "choice4": "To minimize the waiting time of processes",
+    "answer": 3
+  },
+  {
+    "question": "Which of the following is a disadvantage of using a monolithic kernel?",
+    "choice1": "Increased security",
+    "choice2": "Complexity of development",
+    "choice3": "Efficient resource utilization",
+    "choice4": "Ease of adding new features",
+    "answer": 2
+  },
+  {
+    "question": "Which file system is commonly used in Linux operating systems?",
+    "choice1": "FAT32",
+    "choice2": "NTFS",
+    "choice3": "EXT4",
+    "choice4": "HFS+",
+    "answer": 3
+  },
+  {
+    "question": "What is the purpose of an interrupt handler in an operating system?",
+    "choice1": "To handle exceptions",
+    "choice2": "To handle system calls",
+    "choice3": "To handle hardware interrupts",
+    "choice4": "To handle software interrupts",
+    "answer": 3
+  },
+  {
+    "question": "Which of the following is not a deadlock prevention technique?",
+    "choice1": "Resource preemption",
+    "choice2": "Circular wait avoidance",
+    "choice3": "Mutual exclusion",
+    "choice4": "Hold and wait",
+    "answer": 3
+  },
+  {
+    "question": "What is the purpose of a semaphore in operating systems?",
+    "choice1": "To prevent deadlocks",
+    "choice2": "To synchronize concurrent processes",
+    "choice3": "To manage memory",
+    "choice4": "To handle hardware interrupts",
+    "answer": 2
+  }
+]
