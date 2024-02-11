@@ -10,6 +10,12 @@ function getUrlParameter(name) {
   if (!results[2]) return "";
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+//subject mapping
+
+const map = {};
+for (let i = 0; i < 5; i++) {
+  map[`os${i}`] = `Operating System (set-${i + 1})`;
+}
 
 const username = document.querySelector("#username");
 const saveScoreBtn = document.querySelector("#saveScoreBtn");
@@ -39,8 +45,10 @@ saveHighScore = (e) => {
   e.preventDefault();
 
   const score = {
+    sub: map[subValue],
     score: mostRecentScore,
     name: username.value,
+    ...quizSummary,
   };
   highScores.push(score);
 

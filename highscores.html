@@ -14,8 +14,18 @@
   <body>
     <div class="container">
       <div id="highScores" class="flex-center flex-column">
-        <h1 id="finalScore" class="title">Leaderboard</h1>
-        <ul id="highScoresList"></ul>
+        <h1 id="finalScore" class="title">
+          Leaderboard
+          <span
+            id="clearLeaderboard"
+            class="delete-btn"
+            title="Clear the leaderboard"
+          >
+            <i class="fas fa-trash-alt"></i>
+          </span>
+        </h1>
+
+        <div id="highScoresList"></div>
         <a href="./" class="btn">Go Home <i class="fas fa-home"></i></a>
       </div>
     </div>
