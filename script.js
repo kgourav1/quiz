@@ -29,7 +29,7 @@ function createSubjectButtons() {
   // Get the subjects container element
   var subjectsContainer = document.querySelector(".subjects");
   // Loop to create buttons for sets 0 to 4
-  for (var i = 0; i < 2; i++) {
+  for (var i = 0; i < 5; i++) {
     // Create subject button
     var subjectButton = createSubjectButton(i);
     // Append the created button to the subjects container
